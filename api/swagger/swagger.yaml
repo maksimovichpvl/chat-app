@@ -2,7 +2,7 @@ swagger: "2.0"
 info:
   version: "0.0.1"
   title: Chat App
-host: localhost:3005
+host: chat-app-23.herokuapp.com/
 basePath: /api
 consumes:
   - application/json
