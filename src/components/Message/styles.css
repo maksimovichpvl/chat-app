@@ -1,0 +1,21 @@
+.message {
+  display: flex;
+  margin: 10px 0; }
+  .message--my {
+    justify-content: flex-end;
+    text-align: right; }
+  .message--received {
+    justify-content: flex-start;
+    text-align: left; }
+  .message__wrapper {
+    word-wrap: break-word;
+    max-width: 140px; }
+  .message__username {
+    font-weight: bold; }
+  .message__msg {
+    padding: 10px;
+    border-radius: 5px; }
+    .message__msg--my {
+      background-color: #ccebec; }
+    .message__msg--received {
+      background-color: #e2edd9; }

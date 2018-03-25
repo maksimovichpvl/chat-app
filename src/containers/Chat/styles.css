@@ -1,0 +1,23 @@
+.chat {
+  background-color: #fff;
+  padding: 15px;
+  border: 1px solid #cccccc;
+  max-width: 450px;
+  margin: 0 auto; }
+  .chat__container {
+    height: 450px;
+    overflow-x: scroll;
+    padding: 5px;
+    margin: 15px 0;
+    border: 1px solid #cccccc; }
+  .chat__errors {
+    font-size: 12px;
+    color: #ff9c9c; }
+  .chat__close {
+    cursor: pointer;
+    text-align: right; }
+  .chat__top {
+    display: flex;
+    justify-content: space-between; }
+    .chat__top span {
+      padding: 5px; }

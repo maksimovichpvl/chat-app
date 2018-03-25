@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Chat Component renders without crashing 1`] = `
+<div
+  className="chat"
+>
+  <div
+    className="chat__top"
+  />
+  <div>
+    <div
+      className="row"
+    >
+      <div
+        className="col-md-9"
+      >
+        <input
+          className="form-control"
+          name="username"
+          onChange={[Function]}
+          placeholder="Enter your username"
+          type="text"
+          value=""
+        />
+        <span
+          className="chat__errors"
+        />
+      </div>
+      <div
+        className="col-md-3"
+      >
+        <button
+          className="btn btn-primary"
+          onClick={[Function]}
+          type="button"
+        >
+          Confirm
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

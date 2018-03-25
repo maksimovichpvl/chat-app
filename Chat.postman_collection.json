@@ -1,0 +1,71 @@
+{
+	"id": "b3acddd1-aab7-706c-be64-122d564c7675",
+	"name": "Chat",
+	"description": "",
+	"order": [
+		"46b74ce3-2653-a415-4d6d-7560ea3b573a",
+		"ee891898-7f33-7f06-fac9-cbfc15c6d7eb"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1521582078567,
+	"owner": 0,
+	"public": false,
+	"events": [],
+	"variables": [],
+	"auth": null,
+	"requests": [
+		{
+			"id": "46b74ce3-2653-a415-4d6d-7560ea3b573a",
+			"headers": "",
+			"headerData": [],
+			"url": "{{url}}/api/messages",
+			"queryParams": [],
+			"events": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"auth": null,
+			"time": 1521628927630,
+			"name": "Get All Messages",
+			"description": "",
+			"collectionId": "b3acddd1-aab7-706c-be64-122d564c7675",
+			"responses": [],
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "ee891898-7f33-7f06-fac9-cbfc15c6d7eb",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{url}}/api/messages",
+			"queryParams": [],
+			"events": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"auth": null,
+			"time": 1521795753750,
+			"name": "Create Message",
+			"description": "",
+			"collectionId": "b3acddd1-aab7-706c-be64-122d564c7675",
+			"responses": [],
+			"currentHelper": null,
+			"helperAttributes": null,
+			"rawModeData": "{\n\t\"username\": \"Michel\",\n\t\"content\": \"I write a message\"\n}"
+		}
+	]
+}

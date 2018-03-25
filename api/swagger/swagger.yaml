@@ -1,0 +1,100 @@
+swagger: "2.0"
+info:
+  version: "0.0.1"
+  title: Chat App
+host: localhost:3005
+basePath: /api
+consumes:
+  - application/json
+# format of the responses to the client (Accepts)
+produces:
+  - application/json
+paths:
+  /messages:
+    # binds a127 app logic to a route
+    x-swagger-router-controller: messagesControlles
+    get:
+      tags:
+      - "Messages"
+      description: Get all messages
+      # used as the method name of the controller
+      responses:
+        "200":
+          description: Success
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/GetAllMessagesResponse"
+        # responses may fall through to errors
+        "422":
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"      
+    post:
+      consumes:
+        - application/json
+      produces:
+        - application/json
+        - text/xml
+        - text/html
+      tags:
+      - "Messages"
+      description: Create Message
+      # used as the method name of the controller
+      responses:
+        "200":
+          description: Success
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/CreateMessageResponse"
+        # responses may fall through to errors
+        "422":
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+      parameters:
+        - name: body
+          in: body
+          required: true
+          schema:
+            type: object
+            properties:
+              username:
+                type: string
+                example: Michael
+              content:
+                type: string
+                example: Hello, my name is Michael
+            example:
+              username: Michael
+              content: Hello, my name is Michael
+# complex objects have schema definitions
+definitions:
+  GetAllMessagesResponse:
+    required:
+      - success
+      - data
+    properties:
+      success:
+        type: boolean
+      data:
+        type: array
+        items: 
+          type: object
+  CreateMessageResponse:
+    required:
+      - success
+      - data
+    properties:
+      success:
+        type: boolean
+      data:
+        type: object
+  ErrorResponse:
+    required:
+      - success
+      - errors
+    properties:
+      success:
+        type: boolean
+      errors:
+        type: object

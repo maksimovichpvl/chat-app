@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Message Component renders without crashing 1`] = `
+<div
+  className="message message--my"
+>
+  <div
+    className="message__wrapper"
+  >
+    <div
+      className="message__username message--my"
+    >
+      Test username
+    </div>
+    <div
+      className="message__msg message__msg--my"
+    />
+    <div />
+  </div>
+</div>
+`;
